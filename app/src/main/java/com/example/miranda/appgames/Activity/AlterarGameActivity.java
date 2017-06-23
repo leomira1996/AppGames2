@@ -1,4 +1,4 @@
-package com.example.miranda.appgames;
+package com.example.miranda.appgames.Activity;
 
 
 import android.app.Activity;
@@ -14,13 +14,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import java.io.IOException;
-
-import com.example.miranda.appgames.Util.BancoUtil;
 import com.example.miranda.appgames.DAO.GameDAO;
 import com.example.miranda.appgames.Model.Game;
 import com.example.miranda.appgames.R;
+import com.example.miranda.appgames.Util.BancoUtil;
 import com.example.miranda.appgames.Util.Util;
+
+import java.io.IOException;
 
 
 public class AlterarGameActivity extends Activity {
@@ -74,7 +74,7 @@ public class AlterarGameActivity extends Activity {
                 gameObj.set_ID(Integer.parseInt(codigo));
                 gameObj.setTitulo(game.getText().toString());
                 gameObj.setNota(Integer.parseInt(nota.getText().toString()));
-                gameObj.setDescricao(Integer.parseInt(descricao.getText().toString()));
+                gameObj.setDescricao(descricao.getText().toString());
                 gameObj.setImagem(Util.ImagetoBase64 (((BitmapDrawable)poster.getDrawable()).getBitmap()));
                 crud.alteraRegistro(gameObj);
                 Intent intent = new Intent(AlterarGameActivity.this,ConsultaGameActivity.class);

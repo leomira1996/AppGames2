@@ -1,4 +1,4 @@
-package com.example.miranda.appgames;
+package com.example.miranda.appgames.DAO;
 
 /**
  * Created by Miranda on 11/06/2017.

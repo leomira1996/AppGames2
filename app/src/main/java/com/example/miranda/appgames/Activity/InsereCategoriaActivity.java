@@ -1,4 +1,4 @@
-package com.example.miranda.appgames;
+package com.example.miranda.appgames.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,8 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.miranda.appgames.DAO.CategoriaDAO;
 import com.example.miranda.appgames.Model.Categoria;
+import com.example.miranda.appgames.DAO.CategoriaDAO;
 import com.example.miranda.appgames.R;
 
 public class InsereCategoriaActivity extends Activity {

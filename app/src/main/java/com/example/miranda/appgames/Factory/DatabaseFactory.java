@@ -1,4 +1,4 @@
-package com.example.miranda.appgames;
+package com.example.miranda.appgames.Factory;
 
 /**
  * Created by Miranda on 11/06/2017.

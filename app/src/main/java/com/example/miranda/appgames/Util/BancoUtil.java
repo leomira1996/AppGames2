@@ -1,4 +1,4 @@
-package com.example.miranda.appgames;
+package com.example.miranda.appgames.Util;
 
 /**
  * Created by Miranda on 11/06/2017.
@@ -17,5 +17,5 @@ public class BancoUtil {
     public static final String TABELA_CATEGORIA = "categoria";
     public static final String ID_CATEGORIA = "_id";
     public static final String TITULO_CATEGORIA = "categoria";
-    public static final int VERSAO = 10;
+    public static final int VERSAO = 11;
 }

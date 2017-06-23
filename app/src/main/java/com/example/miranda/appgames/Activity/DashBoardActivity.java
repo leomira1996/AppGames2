@@ -1,12 +1,13 @@
-package com.example.miranda.appgames;
+package com.example.miranda.appgames.Activity;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.os.Bundle;
 
-public class DashBoardActivity extends AppCompatActivity {
+import com.example.miranda.appgames.R;
+
+public class DashBoardActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +23,8 @@ public class DashBoardActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void inserirCategoria(View v){
-        Intent intent = new Intent(DashBoardActivity.this,InsereCategoriaActivity.class);
+        Intent intent  = new Intent(DashBoardActivity.this,InsereCategoriaActivity.class);
+        startActivity(intent);
 
     }
 }

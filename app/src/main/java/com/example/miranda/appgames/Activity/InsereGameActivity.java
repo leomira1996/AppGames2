@@ -1,13 +1,11 @@
-package com.example.miranda.appgames;
+package com.example.miranda.appgames.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.text.AndroidCharacter;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,14 +14,13 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.io.IOException;
-
 import com.example.miranda.appgames.DAO.CategoriaDAO;
-import com.example.miranda.appgames.DAO.SerieDAO;
-import com.example.miranda.appgames.Model.Serie;
+import com.example.miranda.appgames.DAO.GameDAO;
+import com.example.miranda.appgames.Model.Game;
 import com.example.miranda.appgames.R;
 import com.example.miranda.appgames.Util.BancoUtil;
-import com.example.miranda.appgames.Util.Util;
+
+import java.io.IOException;
 
 public class InsereGameActivity extends Activity {
     final int ACTIVITY_SELECT_IMAGE = 1234;
@@ -62,24 +59,28 @@ public class InsereGameActivity extends Activity {
         botao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GameDAO crud = new GameDAO(getBaseContext());
-                EditText titulo = (EditText)findViewById(R.id.editTituloGame);
-                EditText nota = (EditText)findViewById((R.id.editNotaGame));
-                EditText descricao = (EditText)findViewById(R.id.editDescricaoGame);
-                String tituloString = titulo.getText().toString();
-                int notaInt = Integer.parseInt(nota.getText().toString());
-                int descricaoInt =  Integer.parseInt(descricao.getText().toString());
-                String imagemString = Util.ImagetoBase64 (((BitmapDrawable)imageView.getDrawable()).getBitmap());
-                String resultado;
+                try {
+                    GameDAO crud = new GameDAO(getBaseContext());
+                    EditText titulo = (EditText) findViewById(R.id.editTituloGame);
+                    EditText nota = (EditText) findViewById((R.id.editNotaGame));
+                    EditText descricao = (EditText) findViewById(R.id.editDescricaoGame);
+                    String tituloString = titulo.getText().toString();
+                    int notaInt = Integer.parseInt(nota.getText().toString());
+                    String descricaoInt = (descricao.getText().toString());
+                    //String imagemString = Util.ImagetoBase64(((BitmapDrawable) imageView.getDrawable()).getBitmap());
+                    String resultado;
 
-                Game game = new Game(tituloString,notaInt,descricaoInt);
-                game.setImagem(imagemString);
-                resultado = crud.insereDado(game);
+                    Game game = new Game(tituloString, notaInt, descricaoInt);
+                    //game.setImagem(imagemString);
+                    resultado = crud.insereDado(game);
 
-                Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(InsereGameActivity.this,ConsultaGameActivity.class);
-                startActivity(intent);
-                finish();
+                    Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(InsereGameActivity.this, ConsultaGameActivity.class);
+                    startActivity(intent);
+                    finish();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
             }
         });
     }

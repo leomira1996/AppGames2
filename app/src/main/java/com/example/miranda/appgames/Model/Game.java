@@ -1,4 +1,4 @@
-package com.example.miranda.appgames;
+package com.example.miranda.appgames.Model;
 
 /**
  * Created by Miranda on 11/06/2017.
@@ -8,7 +8,7 @@ public class Game {
     private int _ID;
     private String titulo;
     private int nota;
-    private int descricao;
+    private String descricao;
     private String imagem;
     private Categoria categoria;
 
@@ -16,7 +16,7 @@ public class Game {
         categoria = new Categoria();
     }
 
-    public Game(String titulo, int nota, int descricao) {
+    public Game(String titulo, int nota, String descricao) {
         this.titulo = titulo;
         this.nota = nota;
         this.descricao = descricao;
@@ -47,11 +47,11 @@ public class Game {
         this.nota = nota;
     }
 
-    public int getDescricao() {
+    public String getDescricao() {
         return descricao;
     }
 
-    public void setDescricao(int descricao) {
+    public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
 

@@ -1,4 +1,4 @@
-package com.example.miranda.appgames;
+package com.example.miranda.appgames.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,7 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
-import com.example.miranda.appgames.Util.BancoUtril;
+import com.example.miranda.appgames.Util.BancoUtil;
 import com.example.miranda.appgames.DAO.GameDAO;
 import com.example.miranda.appgames.R;
 

@@ -9,17 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DashBoardActivity" />
-        <activity android:name=".InsereCategoriaActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".Activity.DashBoardActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
         </activity>
-        <activity android:name=".AlterarGameActivity" />
-        <activity android:name=".ConsultaGameActivity" />
-        <activity android:name=".InsereGameActivity"></activity>
+        <activity android:name=".Activity.InsereCategoriaActivity"/>
+        <activity android:name=".Activity.AlterarGameActivity"/>
+        <activity android:name=".Activity.ConsultaGameActivity"/>
+        <activity android:name=".Activity.InsereGameActivity"></activity>
     </application>
 
 </manifest>

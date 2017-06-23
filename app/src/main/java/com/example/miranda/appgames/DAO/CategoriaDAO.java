@@ -1,4 +1,4 @@
-package com.example.miranda.appgames;
+package com.example.miranda.appgames.DAO;
 
 /**
  * Created by Miranda on 11/06/2017.
@@ -12,7 +12,6 @@ import android.database.sqlite.SQLiteDatabase;
 import com.example.miranda.appgames.Util.BancoUtil;
 import com.example.miranda.appgames.Model.Categoria;
 import com.example.miranda.appgames.Factory.DatabaseFactory;
-
 
 
 public class CategoriaDAO {
